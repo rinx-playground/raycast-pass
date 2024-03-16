@@ -1,0 +1,40 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "raycast-pass",
+  "title": "raycast-pass",
+  "description": "raycast extension for pass (passwordstore.org)",
+  "icon": "command-icon.png",
+  "author": "rinx",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Pass",
+      "description": "Pass",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.69.3",
+    "execa": "^8.0.1",
+    "squint-cljs": "^0.7.96"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "nrepl": "squint nrepl-server",
+    "prebuild": "squint compile src/*.cljs",
+    "predev": "squint compile src/*.cljs",
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
